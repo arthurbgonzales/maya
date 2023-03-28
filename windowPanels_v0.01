@@ -1,0 +1,30 @@
+import maya.cmds as cmds
+windows = cmds.lsUI (windows = True)
+for window in windows:
+    if window != "CommandWindow" and window != "ConsoleWindow" and window != "MayaWindow" and window != "ColorEditor":
+        cmds.deleteUI(window)
+
+cmds.windowPref("pluginManagerWindow", topLeftCorner = (250,200), widthHeight = (700,400), maximized = False, parentMain = True) 
+cmds.windowPref("PreferencesWindow", topLeftCorner = (250,200), widthHeight = (660,400), maximized = False, parentMain = True) 
+cmds.windowPref("graphEditor1Window", topLeftCorner = (250,200), widthHeight = (660,400), maximized = False, parentMain = True) 
+cmds.windowPref("dopeSheetPanel1Window", topLeftCorner = (250,200), widthHeight = (660,400), maximized = False, parentMain = True) 
+
+# outlinerPanel1Window; 
+# hyperGraphPanel1Window;
+# graphEditor1Window;
+# timeEditorPanel1Window;
+# nodeEditorPanel1Window;
+# shapePanel1Window;
+# posePanel1Window;
+# clipEditorPanel1Window;
+# devicePanel1Window;
+# hyperShadePanel1Window;
+# dynPaintScriptedPanelWindow;
+# blindDataEditor1Window;
+# polyTexturePlacementPanel1Window;
+# contentBrowserPanel1Window;
+# NewFeatureHighlightWnd;
+# MayaWindow;
+# OptionBoxWindow;
+# greasePencilFloatingWindow;
+# pluginManagerWindow;
